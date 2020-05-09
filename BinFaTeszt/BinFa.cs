@@ -95,7 +95,6 @@ namespace BinFaTeszt
     {
       BinFa<T> addFa = this;
       BinFa<T> newFa = new BinFa<T>(item);
-      BinFa<T> tempFa;
       int ii = item.CompareTo(addFa.Root.Core);
 
       //other = addFa;
@@ -107,7 +106,7 @@ namespace BinFaTeszt
         if (addFa.Next(false) == null)
         {
           newFa.Insert(false, item);
-          Add(item);
+          addFa.Add(item);
         }
         else
         {
@@ -119,13 +118,32 @@ namespace BinFaTeszt
         if (addFa.Next(true) == null)
         {
           newFa.Insert(true, item);
-          Add(item);
+          addFa.Add(item);
         }
         else
         {
           addFa = addFa.Next(false);
         }
       }
+    }
+    public void Add2(T item)
+    {
+      BinFa<T> insertFa = this;
+      Node<T> p = new Node<T>(item);
+      int ii = item.CompareTo(insertFa.Root.Core);
+      if (ii < 0)
+      {
+        p.Right = Root.Right;
+        p.Left = null;
+        Root.Right = p;
+      }
+      else
+      {
+        p.Right = null;
+        p.Left = Root.Left;
+        Root.Left = p;
+      }
+
     }
   }
 }

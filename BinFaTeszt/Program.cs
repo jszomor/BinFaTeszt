@@ -18,13 +18,13 @@ namespace BinFaTeszt
       //binFa.Insert(false, "diofa");
       //binFa.Insert(true, "szilvafa");
       //binFa.Insert(false, "fügefa");
-      binFa.Add("almafa");
-      binFa.Add("körtefa");
-      binFa.Add("diofa");
-      binFa.Add("szilvafa");
-      binFa.Add("fügefa");
-      binFa.Add("meggyfa");
-      //binFa.Print();
+      binFa.Add2("almafa");
+      binFa.Add2("körtefa");
+      binFa.Add2("diofa");
+      binFa.Add2("szilvafa");
+      binFa.Add2("fügefa");
+      //binFa.Add2("meggyfa");
+      binFa.Print();
       Console.ReadKey();
     }
   }
