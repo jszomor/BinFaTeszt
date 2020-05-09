@@ -94,17 +94,37 @@ namespace BinFaTeszt
     public void Add(T item)
     {
       BinFa<T> addFa = this;
-      BinFa<T> other;
+      BinFa<T> newFa = new BinFa<T>(item);
+      BinFa<T> tempFa;
       int ii = item.CompareTo(addFa.Root.Core);
 
-      if(ii < 0)
+      //other = addFa;
+
+      Console.WriteLine(addFa.Root.Core);
+
+      if (ii < 0)
       {
-        if(addFa.Next(false))
-        addFa.Add(item);
+        if (addFa.Next(false) == null)
+        {
+          newFa.Insert(false, item);
+          Add(item);
+        }
+        else
+        {
+          addFa = addFa.Next(false);
+        }
       }
       else if (ii > 0)
       {
-
+        if (addFa.Next(true) == null)
+        {
+          newFa.Insert(true, item);
+          Add(item);
+        }
+        else
+        {
+          addFa = addFa.Next(false);
+        }
       }
     }
   }
