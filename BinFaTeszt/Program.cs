@@ -23,7 +23,7 @@ namespace BinFaTeszt
       binFa.Add2("diofa");
       binFa.Add2("szilvafa");
       binFa.Add2("fügefa");
-      //binFa.Add2("meggyfa");
+      binFa.Add2("meggyfa");
       binFa.Print();
       Console.ReadKey();
     }
