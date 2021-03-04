@@ -8,27 +8,39 @@ namespace BinFaNUnitTest
     [SetUp]
     public void Setup()
     {
-      string item = "kutya";
-      BinFa<string> binFa = new BinFa<string>(item);
-
-      //binFa.Insert(true, "almafa");
-      //binFa.Insert(false, "körtefa");
-      //binFa.Insert(false, "diofa");
-      //binFa.Insert(true, "szilvafa");
-      //binFa.Insert(false, "fügefa");
-      binFa.Add2("almafa");
-      binFa.Add2("körtefa");
-      binFa.Add2("diofa");
-      binFa.Add2("szilvafa");
-      binFa.Add2("fügefa");
-      binFa.Add2("meggyfa");
-      IsRight(binFa);
     }
 
     [Test]
-    public void IsRight(BinFa<string> binFa)
+    public void IsRight()
     {
-      Assert.Pass();
+
+      string item = "kutya";
+      BinFa<string> binFa = new BinFa<string>(item);
+      BinFa<string> otherFa;
+      string[] array = new string[] { "almafa", "körtefa", "diofa", "szilvafa", "fügefa", "meggyfa" };
+
+      foreach (var i in array)
+      {
+        binFa.Add2(i);
+
+        
+      }
+
+      otherFa = binFa;
+      if (binFa.Root.Left != null)
+      {
+        binFa = binFa.Next(false);
+        Assert.IsFalse(false);
+
+      }
+      binFa = otherFa;
+      if (binFa.Root.Right != null)
+      {
+        binFa = binFa.Next(true);
+        Assert.IsTrue(true);
+      }
+
+      //Assert.Pass();
     }
   }
 }
