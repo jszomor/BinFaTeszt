@@ -133,17 +133,26 @@ namespace BinFaTeszt
       int ii = item.CompareTo(insertFa.Root.Core);
       if (ii < 0)
       {
-        p.Right = Root.Right;
-        p.Left = null;
-        Root.Right = p;
+        RootRight(p);
       }
       else
       {
-        p.Right = null;
-        p.Left = Root.Left;
-        Root.Left = p;
+        RootLeft(p);
       }
+    }
 
+    public void RootRight(Node<T> p)
+    {
+      p.Right = Root.Right;
+      p.Left = null;
+      Root.Right = p;
+    }
+
+    public void RootLeft(Node<T> p)
+    {
+      p.Right = null;
+      p.Left = Root.Left;
+      Root.Left = p;
     }
   }
 }
