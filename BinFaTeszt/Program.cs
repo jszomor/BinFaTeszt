@@ -10,21 +10,27 @@ namespace BinFaTeszt
   {
     static void Main(string[] args)
     {
-      string item = "kutya";
-      BinFa<string> binFa = new BinFa<string>(item);
 
-      //binFa.Insert(true, "almafa");
-      //binFa.Insert(false, "körtefa");
-      //binFa.Insert(false, "diofa");
-      //binFa.Insert(true, "szilvafa");
-      //binFa.Insert(false, "fügefa");
-      binFa.Add2("almafa");
-      binFa.Add2("körtefa");
-      binFa.Add2("diofa");
-      binFa.Add2("szilvafa");
-      binFa.Add2("fügefa");
-      //binFa.Add2("meggyfa");
-      binFa.Print();
+      //Fibonacci.Get2(10);
+
+      //Fibonacci.voidFibonacci_Iterative(10);
+      Console.WriteLine(Fibonacci.fibonacciNext(10));
+      //Console.WriteLine(Fibonacci.fibonacciRec(9)); 
+      //string item = "kutya";
+      //BinFa<string> binFa = new BinFa<string>(item);
+
+      ////binFa.Insert(true, "almafa");
+      ////binFa.Insert(false, "körtefa");
+      ////binFa.Insert(false, "diofa");
+      ////binFa.Insert(true, "szilvafa"); 
+      ////binFa.Insert(false, "fügefa");
+      //binFa.Add2("almafa");
+      //binFa.Add2("körtefa");
+      //binFa.Add2("diofa");
+      //binFa.Add2("szilvafa");
+      //binFa.Add2("fügefa");
+      ////binFa.Add2("meggyfa");
+      //binFa.Print();
       Console.ReadKey();
     }
   }
