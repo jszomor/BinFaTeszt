@@ -83,5 +83,27 @@ namespace BinFaTeszt
       }
       return F;
     }
+
+    public static int Fibx(int n)
+    {
+      if (n < 0)  { throw new ArgumentOutOfRangeException("Can not have negative number"); }
+      if (n == 0) { return 0; }
+      if (n < 3)  { return 1; }
+
+      //var (a, b, c) = (1, 1, 0); tuple
+      int a = 1;
+      int b = 1;
+      int c = 0;
+
+      while (n > 2)
+      {
+        //(a, b) = (b, a + b);// tuple
+        c = a + b;
+        a = b;
+        b = c;
+        n--;
+      }
+      return c;
+    }
   }
 }

@@ -14,7 +14,8 @@ namespace BinFaTeszt
       //Fibonacci.Get2(10);
 
       //Fibonacci.voidFibonacci_Iterative(10);
-      Console.WriteLine(Fibonacci.fibonacciNext(10));
+      //Console.WriteLine(Fibonacci.fibonacciNext(10));
+      Console.WriteLine(Fibonacci.Fibx(10));
       //Console.WriteLine(Fibonacci.fibonacciRec(9)); 
       //string item = "kutya";
       //BinFa<string> binFa = new BinFa<string>(item);
